@@ -1,15 +1,26 @@
 {
-    "version": 2,
-    "redirects": [
-      {
-        "source": "/index.html",
-        "destination": "/",
-        "permanent": true
-      },
-      {
-        "source": "/tech.html",
-        "destination": "/Roadmap",
-        "permanent": true
-      }
-    ]
-  }
+  "version": 2,
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/tech.html",
+      "destination": "/roadmap",
+      "permanent": true
+    }
+  ],
+  "routes": [
+    { 
+      "src": "/roadmap",
+      "dest": "/tech.html"
+    },
+    {
+      "src": "/assets/(.*)",
+      "dest": "/assets/$1"
+    }
+  ]
+}
